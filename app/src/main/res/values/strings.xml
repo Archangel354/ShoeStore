@@ -9,4 +9,10 @@
     <string name="if_new_user_select_create">If new user, select Create</string>
     <string name="if_already_a_user_select_login">If already a user, select Login</string>
     <string name="login">Login</string>
+    <string name="welcome_to_shoes_r_us">Welcome to Shoes R Us!!!</string>
+    <string name="enter_email_here">Enter email here</string>
+    <string name="find_the_perfect_shoe">Find the perfect shoe</string>
+    <string name="or_simply_browse_the_amazing_selections">or simply browse the amazing selections</string>
+    <string name="next">Next</string>
+    <string name="just_click_next_for_instructions">Just click Next for instructions</string>
 </resources>
