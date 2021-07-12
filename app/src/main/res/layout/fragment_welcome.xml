@@ -12,7 +12,8 @@
         android:id="@+id/shoeImage"
         android:layout_width="match_parent"
         android:layout_height="324dp"
-        tools:src="@drawable/women_shoes" />
+        tools:src="@drawable/women_shoes"
+        android:contentDescription="@string/womenshoes" />
 
     <TextView
         android:id="@+id/welcomeText1"
