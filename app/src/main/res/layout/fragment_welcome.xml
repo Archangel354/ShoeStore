@@ -12,8 +12,9 @@
         android:id="@+id/shoeImage"
         android:layout_width="match_parent"
         android:layout_height="324dp"
-        tools:src="@drawable/women_shoes"
-        android:contentDescription="@string/womenshoes" />
+        android:contentDescription="@string/womenshoes"
+        android:padding="20sp"
+        tools:src="@drawable/women_shoes" />
 
     <TextView
         android:id="@+id/welcomeText1"
