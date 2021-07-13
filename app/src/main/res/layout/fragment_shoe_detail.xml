@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00ffcc"
-    tools:context=".ShoeDetailFragment" >
+    tools:context=".ShoeDetailFragment">
 
     <TextView
         android:id="@+id/shoeDetailText"
@@ -18,5 +18,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/shoeListScrollView" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
