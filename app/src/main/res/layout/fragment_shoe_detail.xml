@@ -12,6 +12,7 @@
         android:id="@+id/shoeDetailText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="Shoe Details"
         android:textAlignment="center"
         android:textSize="34sp"

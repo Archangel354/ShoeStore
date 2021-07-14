@@ -16,10 +16,7 @@ class WelcomeFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val binding: FragmentWelcomeBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
-
         binding.welcomeButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_welcomeFragment_to_instructionsFragment))
-
-
         return binding.root
     }
 
