@@ -3,16 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.navigation.LoginFragment">
-
-
 <androidx.constraintlayout.widget.ConstraintLayout
-
     android:id="@+id/loginlayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#00ffcc"
-    tools:context=".LoginFragment">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <Button
         android:id="@+id/createNewUserButton"
