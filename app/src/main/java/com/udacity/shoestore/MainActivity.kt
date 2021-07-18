@@ -11,7 +11,9 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import timber.log.Timber
 import kotlin.math.log
@@ -21,7 +23,11 @@ class MainActivity : AppCompatActivity() {
 
     //private lateinit var binding: ActivityMainBinding
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        val topLevelDestinations = mutableSetOf<Int>()
+
         super.onCreate(savedInstanceState)
         Timber.i("actionbar is null")
        val actionBar: ActionBar? = this.supportActionBar
@@ -32,12 +38,17 @@ class MainActivity : AppCompatActivity() {
         else{
             Timber.i("actionbar is null")
         }
-        @Suppress("UNUSED_VARIABLE")
+        //@Suppress("UNUSED_VARIABLE")
         //binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
         Timber.plant(Timber.DebugTree())
+        topLevelDestinations.add(R.id.loginFragment)
+        topLevelDestinations.add(R.id.shoeListFragment)
+        var appBarConfiguration = AppBarConfiguration
+            .Builder(topLevelDestinations).build()
+        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onSupportNavigateUp(): Boolean {
