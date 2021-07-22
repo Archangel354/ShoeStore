@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
@@ -22,6 +23,7 @@ class ShoeListFragment : Fragment() {
         val binding: FragmentShoeListBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
         binding.floatingActionButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_shoeListFragment_to_shoeDetailFragment))
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -32,15 +34,10 @@ class ShoeListFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId) {
-            R.id.action_shoeListFragment_to_loginFragment -> {
-                // TODO: Log out.
-                return true
-            }
-
-//        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-//                || super.onOptionsItemSelected(item)
+        findNavController().navigate(R.id.action_shoeListFragment_to_loginFragment)
+       return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
         }
-        return true
+
     }
-}
+
