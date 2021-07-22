@@ -14,8 +14,10 @@ import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 class ShoeListFragment : Fragment() {
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         setHasOptionsMenu(true)
         val binding: FragmentShoeListBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
@@ -29,7 +31,16 @@ class ShoeListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
+
+        when (item.itemId) {
+            R.id.action_shoeListFragment_to_loginFragment -> {
+                // TODO: Log out.
+                return true
+            }
+
+//        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+//                || super.onOptionsItemSelected(item)
+        }
+        return true
     }
 }

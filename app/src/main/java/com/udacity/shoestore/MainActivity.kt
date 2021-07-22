@@ -16,12 +16,11 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import timber.log.Timber
-import kotlin.math.log
 
 
 class MainActivity : AppCompatActivity() {
 
-    //private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
 
 
@@ -38,9 +37,8 @@ class MainActivity : AppCompatActivity() {
         else{
             Timber.i("actionbar is null")
         }
-        //@Suppress("UNUSED_VARIABLE")
-        //binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
+        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
         Timber.plant(Timber.DebugTree())
