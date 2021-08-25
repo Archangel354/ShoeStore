@@ -19,10 +19,7 @@ import timber.log.Timber
 
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val topLevelDestinations = mutableSetOf<Int>()
@@ -53,14 +50,4 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return navController.navigateUp()
     }
-
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        val id: Int = item.getItemId()
-//        if (id == android.R.id.home) {
-//            NavUtils.navigateUpFromSameTask(this)
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
-
-
 }

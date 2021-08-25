@@ -19,4 +19,9 @@ class ShoeStoreViewModel: ViewModel() {
         super.onCleared()
         Timber.i("ShoeStoreViewModel destroyed!")
     }
+
+    fun addShoeToList(shoe: Shoe) {
+        shoesList.add(shoe)
+        _shoeListLiveData.value = shoesList // --> Would trigger Observer
+    }
 }

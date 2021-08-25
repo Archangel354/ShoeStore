@@ -29,4 +29,5 @@
     <string name="shoe_size">Shoe Size</string>
     <string name="shoe_description">Shoe Description</string>
     <string name="enter_company_name">Enter company name</string>
+    <string name="plus_sign">plus sign</string>
 </resources>

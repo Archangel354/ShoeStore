@@ -14,16 +14,19 @@ import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 class ShoeListFragment : Fragment() {
 
+    private var binding: FragmentShoeListBinding? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list,container,false)
         setHasOptionsMenu(true)
-        val binding: FragmentShoeListBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
+        val binding: FragmentShoeListBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
         binding.floatingActionButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_shoeListFragment_to_shoeDetailFragment))
         setHasOptionsMenu(true)
+        binding?.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }
 
