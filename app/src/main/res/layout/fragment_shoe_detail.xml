@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+        <variable
+            name="shoeStoreViewModel"
+            type="com.udacity.shoestore.models.ShoeStoreViewModel" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
         android:text="@string/save"
+        android:onClick="@{() -> shoeStoreViewModel.onSave(shoe)}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCancel"
         app:layout_constraintHorizontal_bias="0.5"
@@ -38,6 +47,7 @@
         android:layout_marginStart="12dp"
         android:ems="10"
         android:hint="@string/enter_name_here"
+        android:text="@={shoe.name}"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/txtCompanyName"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +61,7 @@
         android:ems="10"
         android:hint="@string/enter_company_name"
         android:inputType="textPersonName"
+        android:text="@={shoe.company}"
         app:layout_constraintBottom_toTopOf="@+id/txtShoeSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCompanyName"
@@ -64,6 +75,7 @@
         android:ems="10"
         android:hint="@string/enter_shoe_size"
         android:inputType="number"
+        android:text="@={``+ shoe.size}"
         app:layout_constraintBottom_toTopOf="@+id/txtShoeDescription"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtShoeSize" />
@@ -75,6 +87,7 @@
         android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="@string/enter_shoe_description"
+        android:text="@={shoe.description}"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnSave"
         app:layout_constraintStart_toStartOf="parent"

@@ -6,22 +6,30 @@ import androidx.lifecycle.ViewModel
 import timber.log.Timber
 
 class ShoeStoreViewModel: ViewModel() {
-    init {
-        Timber.i("ShoeStoreModel created!")
-    }
+    // List of shoes
+    private val _shoeListLiveData = MutableLiveData<MutableList<Shoe>>()
 
-    private val shoesList = mutableListOf<Shoe>()
-    private val _shoeListLiveData = MutableLiveData<List<Shoe>>()
-    val shoeListLiveData: LiveData<List<Shoe>>
+    val shoeListLiveData: LiveData<MutableList<Shoe>>
         get() = _shoeListLiveData
 
-    override fun onCleared() {
-        super.onCleared()
-        Timber.i("ShoeStoreViewModel destroyed!")
+    // Navigation event
+    private val _eventNavigate = MutableLiveData<Boolean>()
+    val eventNavigate: LiveData<Boolean>
+        get() = _eventNavigate
+
+
+    init {
+        _shoeListLiveData.value = ArrayList<Shoe>()
+        _eventNavigate.value = false
     }
 
-    fun addShoeToList(shoe: Shoe) {
-        shoesList.add(shoe)
-        _shoeListLiveData.value = shoesList // --> Would trigger Observer
+    // Adds Shoe object to shoeListLiveData
+    fun onSave(shoe: Shoe) {
+        _eventNavigate.value = true
+        _shoeListLiveData.value?.add(shoe)
+    }
+
+    fun onComplete() {
+        _eventNavigate.value = false
     }
 }
