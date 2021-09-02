@@ -18,26 +18,14 @@
         android:background="#00ffcc">
 
 
-        <TextView
-            android:id="@+id/shoeListText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="401dp"
-            android:text="@string/shoe_list"
-            android:textAlignment="center"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
         <ScrollView
             android:id="@+id/scrllShoeListFragment"
-            android:layout_width="387dp"
-            android:layout_height="590dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="48dp"
             android:padding="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,19 +45,33 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </ScrollView>
 
+        <TextView
+            android:id="@+id/shoeListText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_list"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="404dp"
             android:clickable="true"
-            android:contentDescription="@string/plus_sign"
-            android:focusable="true"
-            android:src="@android:drawable/ic_input_add"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.925"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintVertical_bias="0.9"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shoeListText" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

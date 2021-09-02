@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
@@ -19,18 +18,21 @@
             android:layout_width="74dp"
             android:layout_height="25dp"
             android:layout_marginStart="16dp"
+            style="@style/MyFont"
             android:text="@{shoe.name}" />
 
         <TextView
             android:id="@+id/textview_list_shoesize"
             android:layout_width="47dp"
             android:layout_height="23dp"
+            style="@style/MyFont"
             android:text="@{``+ shoe.size}" />
 
         <TextView
             android:id="@+id/textview_list_shoecompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/MyFont"
             android:text="@{shoe.company}" />
 
         <TextView
@@ -38,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            style="@style/MyFont"
             android:text="@{shoe.description}" />
 
     </LinearLayout>
