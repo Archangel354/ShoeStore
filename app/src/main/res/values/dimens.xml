@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_title">34sp</dimen>
+    <dimen name="medium_text">20sp</dimen>
+    <dimen name="small_text">16sp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="very_larg_margin">136dp</dimen>
+    <dimen name="large_width">87dp</dimen>
+    <dimen name="large_height">61dp</dimen>
+    <dimen name="medium_height">34dp</dimen>
+    <dimen name="margin60">60dp</dimen>
+    <dimen name="margin12">12dp</dimen>
+    <dimen name="height48">48dp</dimen>
+    <dimen name="width0">0dp</dimen>
+    <dimen name="margin50">50dp</dimen>
+    <dimen name="textSize34">34sp</dimen>
+    <dimen name="margin74">74dp</dimen>
+    <dimen name="margin76">76dp</dimen>
+    <dimen name="margin85">85dp</dimen>
+    <dimen name="margin84">84dp</dimen>
+    <dimen name="margin54">54dp</dimen>
+    <dimen name="width260">260dp</dimen>
+    <dimen name="height203">203dp</dimen>
+    <dimen name="margin24">24dp</dimen>
+    <dimen name="margin29">29dp</dimen>
+    <dimen name="textSize16">16sp</dimen>
+    <dimen name="margin87">87dp</dimen>
+    <dimen name="magin31">31dp</dimen>
+    <dimen name="margin313">313dp</dimen>
+    <dimen name="height25">25dp</dimen>
+    <dimen name="width47">47dp</dimen>
+    <dimen name="height23">23dp</dimen>
+    <dimen name="margin8">8dp</dimen>
+</resources>

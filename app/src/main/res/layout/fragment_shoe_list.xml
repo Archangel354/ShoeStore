@@ -22,12 +22,12 @@
 
         <ScrollView
             android:id="@+id/scrllShoeListFragment"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="48dp"
+            android:layout_width="@dimen/width0"
+            android:layout_height="@dimen/width0"
+            android:layout_marginStart="@dimen/margin12"
+            android:layout_marginTop="@dimen/height48"
+            android:layout_marginEnd="@dimen/margin12"
+            android:layout_marginBottom="@dimen/height48"
             android:padding="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

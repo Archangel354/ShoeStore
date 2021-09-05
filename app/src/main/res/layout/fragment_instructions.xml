@@ -16,23 +16,21 @@
     android:background="#00ffcc"
     android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:id="@+id/instructionsText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Instructions on how to select shoes"
+        android:text="@string/instructions_on_how_to_select_shoes"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="@dimen/large_title"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/step1Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        android:text="1. Press the button below to go to the Shoe List Screen"
+        android:layout_margin="@dimen/medium_text"
+        android:text="@string/_1_press_the_button_below_to_go_to_the_shoe_list_screen"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -40,8 +38,8 @@
         android:id="@+id/step2Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        android:text="2. Then press the red circular button to add a shoe "
+        android:layout_margin="@dimen/medium_text"
+        android:text="@string/_2_then_press_the_red_circular_button_to_add_a_shoe"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -49,9 +47,9 @@
         android:id="@+id/step2Text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        android:text="3. Then press Save or Cancel"
-        android:textSize="16sp"
+        android:layout_margin="@dimen/medium_text"
+        android:text="@string/_3_then_press_save_or_cancel"
+        android:textSize="@dimen/small_text"
         android:textStyle="bold" />
 
     <TextView
@@ -59,8 +57,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="20sp"
-        android:text="Press Show List button to look at the shoes"
+        android:layout_margin="@dimen/medium_text"
+        android:text="@string/press_show_list_button_to_look_at_the_shoes"
         android:textStyle="bold" />
 
     <Button
@@ -69,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:foregroundGravity="center"
-        android:text="Press for the Shoe List" />
+        android:text="@string/press_for_the_shoe_list" />
 
 </LinearLayout>
 </layout>

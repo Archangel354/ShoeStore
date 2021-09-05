@@ -17,16 +17,16 @@
 
         <TextView
             android:id="@+id/textview_list_shoename"
-            android:layout_width="74dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="@dimen/margin74"
+            android:layout_height="@dimen/height25"
+            android:layout_marginStart="@dimen/margin_small"
             style="@style/MyFont"
             android:text="@{shoe.name}" />
 
         <TextView
             android:id="@+id/textview_list_shoesize"
-            android:layout_width="47dp"
-            android:layout_height="23dp"
+            android:layout_width="@dimen/width47"
+            android:layout_height="@dimen/height23"
             style="@style/MyFont"
             android:text="@{``+ shoe.size}" />
 
@@ -41,7 +41,7 @@
             android:id="@+id/textview_list_shoedesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/margin8"
             style="@style/MyFont"
             android:text="@{shoe.description}" />
 
