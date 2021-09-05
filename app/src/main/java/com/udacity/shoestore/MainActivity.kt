@@ -11,6 +11,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -36,7 +37,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-        val navController = this.findNavController(R.id.myNavHostFragment)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        //val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
         Timber.plant(Timber.DebugTree())
         topLevelDestinations.add(R.id.loginFragment)
