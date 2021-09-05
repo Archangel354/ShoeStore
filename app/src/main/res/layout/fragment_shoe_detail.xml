@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="shoe"
@@ -8,9 +10,7 @@
             name="shoeStoreViewModel"
             type="com.udacity.shoestore.models.ShoeStoreViewModel" />
     </data>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/shoeDetailLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,9 +21,9 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:text="@string/save"
+        android:layout_marginBottom="60dp"
         android:onClick="@{() -> shoeStoreViewModel.onSave(shoe)}"
+        android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCancel"
         app:layout_constraintHorizontal_bias="0.5"
@@ -33,12 +33,14 @@
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnSave"
-        app:layout_constraintTop_toBottomOf="@+id/edtShoeDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/edtShoeDescription"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/edtShoeName"
@@ -61,6 +63,7 @@
         android:ems="10"
         android:hint="@string/enter_company_name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@={shoe.company}"
         app:layout_constraintBottom_toTopOf="@+id/txtShoeSize"
         app:layout_constraintStart_toStartOf="parent"

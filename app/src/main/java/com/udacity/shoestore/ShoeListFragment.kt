@@ -26,27 +26,21 @@ class ShoeListFragment : Fragment() { private val viewModel: ShoeStoreViewModel 
             inflater, R.layout.fragment_shoe_list, container, false
         )
 
-        // Floating action button
-        binding.floatingActionButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
-        }
-
         binding.shoeStoreViewModel = viewModel
-
-        // Observes shoeListLiveData in SharedViewModel
         viewModel.shoeListLiveData.observe(viewLifecycleOwner, Observer { shoeList ->
 
-            // Loops through the shoeList and inflates each shoe
             for (shoe in shoeList) {
                 val listItem = ShoeListBinding.inflate(layoutInflater, null, false)
 
-                // Adds the user inputted values from shoe object
                 listItem.shoe = shoe
 
-                // Adds the inflated view to the linearlayoutListContainer
                 binding.shoeListLinearLayout.addView(listItem.root)
             }
         })
+
+        binding.floatingActionButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
+        }
         setHasOptionsMenu(true)
         return binding.root
     }

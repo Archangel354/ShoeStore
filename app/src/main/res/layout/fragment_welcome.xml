@@ -8,8 +8,19 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00ffcc"
-        android:orientation="vertical">
+        android:background="#00ffcc">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="260dp"
+            android:layout_height="203dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/women_shoes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/welcomeButton"
@@ -22,19 +33,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/welcomeButtonLabel" />
 
-        <ImageView
-            android:id="@+id/shoeImage"
-            android:layout_width="188dp"
-            android:layout_height="236dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="@string/womenshoes"
-            android:padding="5sp"
-            app:layout_constraintBottom_toTopOf="@+id/welcomeText1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ImageContrastCheck"
-            tools:src="@drawable/women_shoes" />
+        <!--            app:layout_constraintHorizontal_bias="0.498"-->
+<!--            app:layout_constraintVertical_bias="0.902"-->
+<!--            tools:ignore="ImageContrastCheck"-->
+
 
         <TextView
             android:id="@+id/welcomeText2"

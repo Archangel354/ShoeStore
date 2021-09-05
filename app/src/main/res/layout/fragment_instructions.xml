@@ -35,7 +35,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
-        android:text="1. Press the button below to go to the Shoe List Screen"
+        android:text="2. Then press the red circular button to add a shoe "
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/step2Text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:text="3. Then press Save or Cancel"
         android:textSize="16sp"
         android:textStyle="bold" />
 

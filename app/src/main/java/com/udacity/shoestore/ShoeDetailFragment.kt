@@ -9,13 +9,11 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.models.ShoeStoreViewModel
-import timber.log.Timber
 
 class ShoeDetailFragment : Fragment() {
     private val viewModel: ShoeStoreViewModel by activityViewModels()
@@ -37,7 +35,7 @@ class ShoeDetailFragment : Fragment() {
         binding.shoe = Shoe("", 0.0, "", "")
 
 
-        viewModel.eventNavigate.observe(viewLifecycleOwner, Observer {
+        viewModel.dataTransfer.observe(viewLifecycleOwner, Observer {
             if (it) {
                 findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
                 viewModel.onComplete()
