@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.navigation.LoginFragment">
 
+<!--    This layout needed ConstraintLayout since the widgets were no longer-->
+<!--    vertically stacked.   A layout that could handle a more complex arrangement-->
+<!--    of the widgets was needed this time.-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/loginlayout"
         android:layout_width="match_parent"

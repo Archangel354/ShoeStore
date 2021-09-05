@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <!--vxmlns:tools="http://schemas.android.com/tools" -->
 
-
+<!--    Using Linearlayout was simpler to use than ConstraintLayout since-->
+<!--    there were only a few widgets in this layout.   the performance was not hindered-->
+<!--    by using Linearlayout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

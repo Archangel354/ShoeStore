@@ -10,6 +10,10 @@
             name="shoeStoreViewModel"
             type="com.udacity.shoestore.models.ShoeStoreViewModel" />
     </data>
+
+    <!--    This layout needed ConstraintLayout since the widgets were no longer-->
+    <!--    just vertically stacked.   A layout that could handle a more complex arrangement-->
+    <!--    of the widgets was needed this time.-->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/shoeDetailLayout"
     android:layout_width="match_parent"

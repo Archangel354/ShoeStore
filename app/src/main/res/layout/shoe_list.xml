@@ -9,6 +9,8 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+<!--    This is very simple horizontal layout of the different fields for a Shoe entry. It was-->
+<!--    simpler to use a linearLayout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

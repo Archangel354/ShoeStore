@@ -11,6 +11,8 @@
             type="com.udacity.shoestore.models.ShoeStoreViewModel" />
     </data>
 
+<!--    This layout could have been a vertical linearlayout but I wanted to get more-->
+<!--    experience using ConstraintLayout.-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoeListLayout"
         android:layout_width="match_parent"
