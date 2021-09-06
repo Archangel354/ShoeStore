@@ -22,9 +22,9 @@ class ShoeListFragment : Fragment() { private val viewModel: ShoeStoreViewModel 
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentShoeListBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_shoe_list, container, false
-        )
+        //val binding: FragmentShoeListBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
+        // Added more concise way of initializing the binding
+        val binding = FragmentShoeListBinding.inflate(inflater,container,false)
 
         binding.shoeStoreViewModel = viewModel
         viewModel.shoeListLiveData.observe(viewLifecycleOwner, Observer { shoeList ->
@@ -51,7 +51,9 @@ class ShoeListFragment : Fragment() { private val viewModel: ShoeStoreViewModel 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
         findNavController().navigate(R.id.action_shoeListFragment_to_loginFragment)
+        //findNavController().popBackStack()
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
     }

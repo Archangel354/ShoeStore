@@ -12,7 +12,9 @@ class ShoeStoreViewModel: ViewModel() {
         get() = _shoeListLiveData
 
     // Navigation event
-    private val _dataTransfer = MutableLiveData<Boolean>()
+    //private val _dataTransfer = MutableLiveData<Boolean>()
+    // Per mentor suggestion, I am giving _dataTransfer an initial value of false
+    private val _dataTransfer = MutableLiveData<Boolean>(false)
     val dataTransfer: LiveData<Boolean>
         get() = _dataTransfer
 
