@@ -1,8 +1,11 @@
 package com.udacity.shoestore.models
 
+import android.widget.Toast
+import android.widget.Toast.makeText
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import timber.log.Timber
 
 class ShoeStoreViewModel: ViewModel() {
     // List of shoes
@@ -28,6 +31,7 @@ class ShoeStoreViewModel: ViewModel() {
     fun onSave(shoe: Shoe) {
         _dataTransfer.value = true
         _shoeListLiveData.value?.add(shoe)
+        Timber.i("Shoe added: ${shoe.name}")
     }
 
     fun onComplete() {
