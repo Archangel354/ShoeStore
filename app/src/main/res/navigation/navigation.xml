@@ -46,7 +46,7 @@
             app:exitAnim="@android:anim/fade_out"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
-            app:popUpTo="@id/instructionsFragment"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
 
     </fragment>
@@ -64,7 +64,9 @@
             app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_shoeListFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/shoeListFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"

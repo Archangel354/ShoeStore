@@ -29,7 +29,4 @@
     <dimen name="magin31">31dp</dimen>
     <dimen name="margin313">313dp</dimen>
     <dimen name="height25">25dp</dimen>
-    <dimen name="width47">47dp</dimen>
-    <dimen name="height23">23dp</dimen>
-    <dimen name="margin8">8dp</dimen>
 </resources>
